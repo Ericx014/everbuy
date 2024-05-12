@@ -1,45 +1,50 @@
+import FeaturedCard from "./FeaturedCard";
+
 const Featured = () => {
+  const featuredProducts = [
+    {
+      name: "Handbag",
+      image: "handbag.png",
+      rating: 5,
+      price: 39.99,
+      numOfRating: 45,
+    },
+    {
+      name: "Shoes",
+      image: "blackshoes.png",
+      rating: 5,
+      price: 99.0,
+      numOfRating: 98,
+    },
+    {
+      name: "Shirt",
+      image: "polotee.png",
+      rating: 5,
+      price: 19.99,
+      numOfRating: 77,
+    },
+    {
+      name: "Earbuds",
+      image: "earbuds.png",
+      rating: 5,
+      price: 78.99,
+      numOfRating: 33,
+    }
+  ];
+
   return (
     <section className="w-[70vw] h-[40vh] mx-auto my-0 flex justify-between">
-      <div className="w-[40%] flex flex-col items-center justify-center rounded-lg gap-2">
-        <div className="bg-gray-100 w-[80%] h-[90%] mt-3 rounded-md flex justify-center">
-          <img
-            src="handbag.png"
-            alt="handbag"
-            className="w-[80%] object-contain px-2 py-3"
-          />
-        </div>
-        <div className="w-[80%] text-[12px] flex justify-between">
-          <p>Rating</p>
-          <p>Handbag</p>
-        </div>
-      </div>
-      <div className="w-[40%] flex flex-col items-center justify-center rounded-lg gap-2">
-        <div className="bg-gray-100 w-[80%] h-[90%] mt-3 rounded-md flex justify-center">
-          <img
-            src="handbag.png"
-            alt="handbag"
-            className="w-[80%] object-contain px-2 py-3"
-          />
-        </div>
-        <div className="w-[80%] text-[12px] flex justify-between">
-          <p>Rating</p>
-          <p>Handbag</p>
-        </div>
-      </div>
-      <div className="w-[40%] flex flex-col items-center justify-center rounded-lg gap-2">
-        <div className="bg-gray-100 w-[80%] h-[90%] mt-3 rounded-md flex justify-center">
-          <img
-            src="handbag.png"
-            alt="handbag"
-            className="w-[80%] object-contain px-2 py-3"
-          />
-        </div>
-        <div className="w-[80%] text-[12px] flex justify-between">
-          <p>Rating</p>
-          <p>Handbag</p>
-        </div>
-      </div>
+      {featuredProducts.map((product, index) => (
+        <FeaturedCard
+          key={index}
+          imgsrc={product.image}
+          alt={product.name}
+          rating={product.rating}
+          label={product.name}
+          price={product.price}
+          numOfRating={product.numOfRating}
+        />
+      ))}
     </section>
   );
 };
