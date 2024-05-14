@@ -1,15 +1,36 @@
 import {FaRegArrowAltCircleRight} from "react-icons/fa";
 import {IoChevronBackOutline, IoChevronForwardOutline} from "react-icons/io5";
-import {useState, useEffect} from "react";
+import {useState, useEffect, useRef} from "react";
 
 const Advertisement = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [slideImages, setSlideImages] = useState([]);
+	const nextSlideRef = useRef(null);
 
   useEffect(() => {
     const adImagesSrc = ["shirt.png", "collartee.png"];
     setSlideImages(adImagesSrc);
   }, []);
+
+  const prevSlide = () => {
+    setCurrentSlide((current) =>
+      current === 0 ? slideImages.length - 1 : current - 1
+    );
+  };
+  const nextSlide = () => {
+    setCurrentSlide((current) =>
+      current === slideImages.length - 1 ? 0 : current + 1
+    );
+  };
+
+	nextSlideRef.current = nextSlide;
+
+  useEffect(() => {
+    const slideInterval = setInterval(() => {
+      nextSlideRef.current();
+    }, 3000);
+    return () => clearInterval(slideInterval);
+  }, [currentSlide]);
 
   return (
     <section>
@@ -37,10 +58,15 @@ const Advertisement = () => {
               </button>
               <div className="flex flex-row gap-[1rem]">
                 <button>
-                  <IoChevronBackOutline size={"1.5rem"} />
+                  <IoChevronBackOutline 
+										size={"1.5rem"} 
+										onClick={prevSlide} />
                 </button>
                 <button>
-                  <IoChevronForwardOutline size={"1.5rem"} />
+                  <IoChevronForwardOutline
+                    size={"1.5rem"}
+                    onClick={nextSlide}
+                  />
                 </button>
               </div>
             </div>

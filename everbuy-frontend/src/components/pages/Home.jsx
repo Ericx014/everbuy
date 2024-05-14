@@ -4,6 +4,7 @@ import Promotion from "../Promotion";
 import Featured from "../Featured";
 import Exclusive from "../Exclusive";
 import Advertisement from "../Advertisment";
+import Comments from "../Comments";
 import Footer from "../Footer";
 
 const Home = () => {
@@ -13,9 +14,9 @@ const Home = () => {
       {/* <Slides />		 */}
       <Promotion />
       <Featured />
-      <Exclusive />
-			<Advertisement />
-			<Footer />
+      <Advertisement />
+      <Comments />
+      <Footer />
     </>
   );
 };

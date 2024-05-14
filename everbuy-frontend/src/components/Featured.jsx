@@ -17,11 +17,11 @@ const Featured = () => {
       numOfRating: 98,
     },
     {
-      name: "Shirt",
-      image: "polotee.png",
+      name: "Earbuds",
+      image: "earbuds.png",
       rating: 5,
-      price: 19.99,
-      numOfRating: 77,
+      price: 78.99,
+      numOfRating: 33,
     },
     {
       name: "Earbuds",
@@ -29,11 +29,18 @@ const Featured = () => {
       rating: 5,
       price: 78.99,
       numOfRating: 33,
-    }
+    },
+    {
+      name: "Earbuds",
+      image: "earbuds.png",
+      rating: 5,
+      price: 78.99,
+      numOfRating: 33,
+    },
   ];
 
   return (
-    <section className="w-[70vw] h-[40vh] mx-auto my-0 flex justify-between">
+    <section className="lg:w-[70vw] mx-auto my-0 flex flex-wrap justify-center gap-[1rem]">
       {featuredProducts.map((product, index) => (
         <FeaturedCard
           key={index}
