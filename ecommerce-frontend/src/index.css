@@ -22,3 +22,9 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
+@media (max-width: 500px){
+	img#man {
+		width: 0;
+	}
+}

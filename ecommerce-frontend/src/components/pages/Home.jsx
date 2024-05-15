@@ -4,11 +4,11 @@ import Categories from "../Categories";
 
 const Home = () => {
 	return (
-		<div>
+		<section className="overflow-hidden">
 			<Navbar />
 			<Promotion />
 			<Categories />
-		</div>
+		</section>
 	)
 }
  

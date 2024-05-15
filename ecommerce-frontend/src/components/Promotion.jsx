@@ -1,7 +1,7 @@
 const Promotion = () => {
   return (
-    <section className="w-screen flex justify-center px-[1rem] lg:py-[3rem] bg-gray-100">
-      <div className="w-[95%] sm:w-[85%] md:w-[75%] max-w-[30rem] md:max-w-[40rem] lg:max-w-[65rem] h-[30vh] md:h-[35vh] bg-gray-100 rounded-lg px-[10%]">
+    <section className="w-screen flex justify-center px-[1rem] lg:py-[4rem] bg-gray-100 relative">
+      <div className="w-[95%] sm:w-[85%] md:w-[75%] max-w-[30rem] md:max-w-[40rem] lg:max-w-[65rem] h-[30vh] md:h-[35vh] bg-gray-100 rounded-lg px-[10%] flex flex-row gap-[2%]">
         <div className="h-full flex flex-col justify-center gap-[1rem] lg:gap-[2rem]">
           <div className="flex flex-col lg:gap-[0.5rem]">
             <p className="capitalize text-kaushanscript text-[0.8rem] md:text-[1.2rem] lg:text-[1.4rem]">
@@ -19,6 +19,14 @@ const Promotion = () => {
               Shop now
             </button>
           </div>
+        </div>
+        <div>
+          <img
+            src="man.png"
+            id="man"
+            alt="man"
+            className="absolute bottom-0 w-[9rem] sm:w-[10rem] md:w-[12rem] lg:w-[18rem]"
+          />
         </div>
       </div>
     </section>
