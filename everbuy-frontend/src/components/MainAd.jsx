@@ -1,4 +1,4 @@
-const Home = () => {
+const MainAd = () => {
   return (
     <section>
       <div className="relative">
@@ -11,19 +11,19 @@ const Home = () => {
           <h1 className="text-white text-3xl font-bold tracking-[-0.02rem] mb-2 drop-shadow-lg">
             Latest Collection
           </h1>
-          <p className="text-white text-lg leading-5 mb-8 sm:w-[60%] md:w-[55%] lg:w-[40%] drop-shadow-lg font-semibold">
-            Enjoy 15% off sitewide with min. spend of RM179. From t-shirt, jeans,
-            shorts, watches, bags
+          <p className="text-white text-lg leading-5 mb-8 sm:w-[60%] md:w-[55%] lg:w-[40%] drop-shadow-lg">
+            Enjoy 15% off sitewide with min. spend of RM179. From t-shirt,
+            jeans, shorts, watches, bags
           </p>
           <div>
-						<button className="bg-white text-black uppercase py-2 px-4 rounded-[0.3rem] font-[600] tracking-tighter">
-							Shop now
-						</button>
-					</div>
+            <button className="bg-white text-black uppercase py-2 px-4 rounded-[0.3rem] font-[600] tracking-tighter">
+              Shop now
+            </button>
+          </div>
         </div>
       </div>
     </section>
   );
 };
 
-export default Home;
+export default MainAd;
