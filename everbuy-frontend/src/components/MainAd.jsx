@@ -11,7 +11,7 @@ const MainAd = () => {
           <h1 className="text-white text-3xl font-bold tracking-[-0.02rem] mb-2 drop-shadow-lg">
             Latest Collection
           </h1>
-          <p className="text-white text-lg leading-5 mb-8 sm:w-[60%] md:w-[55%] lg:w-[40%] drop-shadow-lg">
+          <p className="text-white text-lg leading-5 mb-8 sm:w-[60%] md:w-[55%] lg:w-[30%] drop-shadow-lg">
             Enjoy 15% off sitewide with min. spend of RM179. From t-shirt,
             jeans, shorts, watches, bags
           </p>

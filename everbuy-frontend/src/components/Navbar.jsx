@@ -11,14 +11,14 @@ const Navbar = () => {
           className="w-[1.3rem] h-[1.3rem] ml-[0.7rem] hamburger-icon"
         />
       </button>
-      <div className="w-full flex justify-between px-[1rem] lg:px-[2.5rem]">
+      <div className="w-full flex justify-between px-[1rem] md:px-[1.8rem] lg:px-[2.5rem]">
         <h1 className="text-[1.5rem] font-[600]">Logo</h1>
-        <div className="navigation-links flex justify-between items-center md:w-[30%] lg:w-[18%]">
-          <Link>Shop</Link>
-          <Link>Explore</Link>
-          <Link>Gift Cards</Link>
+        <div className="navigation-links flex justify-between items-center md:w-[30%] lg:w-[18%] lg:min-w-[18rem]">
+          <Link className="lg:text-[1.2rem]">Shop</Link>
+          <Link className="lg:text-[1.2rem]">Explore</Link>
+          <Link className="lg:text-[1.2rem]">Gift Cards</Link>
         </div>
-        <div className="flex justify-between items-center w-[40%] sm:w-[25%] md:w-[20%] lg:w-[10%]">
+        <div className="flex justify-between items-center w-[40%] sm:w-[25%] md:w-[20%] lg:w-[10%] lg:min-w-[150px]">
           <Link>
             <img
               src="icons/search-icon.png"
