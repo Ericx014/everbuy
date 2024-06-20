@@ -1,6 +1,7 @@
 import MainAd from "../MainAd";
 import Benefits from "../Benefits";
-import ShopNow from "../ShowNow";
+import ShopNow from "../ShopNow";
+import Promotion from "../Promotion";
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
 			<MainAd />
 			<Benefits />
 			<ShopNow />
+			<Promotion />
 		</>
   );
 };

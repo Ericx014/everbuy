@@ -16,7 +16,7 @@ const MainAd = () => {
             jeans, shorts, watches, bags
           </p>
           <div>
-            <button className="bg-white text-black uppercase py-2 px-4 rounded-[0.3rem] font-[600] tracking-tighter">
+            <button className="bg-white text-black uppercase py-3 px-5 rounded-[0.3rem] font-bold">
               Shop now
             </button>
           </div>
