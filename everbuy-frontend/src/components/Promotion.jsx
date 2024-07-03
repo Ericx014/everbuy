@@ -19,19 +19,19 @@ const Promotion = () => {
       {promotionProducts.map((product, index) => (
         <div
           key={index}
-          className="flex flex-col justify-center items-center text-center bg-white p-[2.5rem] rounded-[1rem] w-[90vw] md:w-[345px] lg:min-w-[450px] lg:w-[40vw] shadow-md shadow-gray-300"
+          className="flex flex-col justify-center items-center text-center bg-white p-[2.5rem] rounded-[1rem] w-[90vw] md:w-[345px] lg:min-w-[450px] lg:w-[40vw] lg:h-[70vh] shadow-md shadow-gray-300"
         >
-          <h3 className="font-bold capitalize text-xl leading-5 mb-2 tracking-tight">
+          <h3 className="font-bold capitalize text-xl lg:text-[30px] leading-5 mb-3 tracking-tight">
             {product.name}
           </h3>
-          <p className="text-[#636363] text-[0.9rem] leading-4 mb-5 max-w-[15rem]">
+          <p className="text-[#636363] text-[1rem] leading-4 mb-6 max-w-[24rem]">
             {product.desc}
           </p>
           <div className="w-[60%] flex flex-row justify-center mb-2">
             <img
               src={product.img}
               alt={product.name}
-              className="object-cover max-h-[140px]"
+              className="object-cover max-h-[140px] lg:max-h-[220px]"
             />
           </div>
           <p className="font-semibold mb-5">RM{product.price}</p>
