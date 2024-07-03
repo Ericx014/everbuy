@@ -48,7 +48,7 @@ const Promotion = () => {
 
   const giftCardAd = (
     <div className="flex justify-center">
-      <div className="flex flex-col justify-center bg-white p-[2.5rem] sm:px-[3rem] md:px-[4rem] lg:px-[6rem] rounded-[1rem] w-[90vw] md:w-[720px] lg:min-w-[920px] lg:w-[81vw] sm:h-[250px] md:h-[300px] shadow-md shadow-gray-300">
+      <div className="flex flex-col justify-center bg-white p-[2.5rem] sm:px-[3rem] md:px-[4rem] lg:px-[6rem] rounded-[1rem] w-[90vw] md:w-[720px] lg:min-w-[920px] lg:w-[81vw] sm:h-[250px] md:h-[300px] lg:h-[375px] shadow-md shadow-gray-300">
         <div className="flex flex-col justify-center lg:gap-[0rem]">
           <h3 className="text-xl md:text-2xl lg:text-3xl capitalize font-bold mb-1">
             gift card
@@ -75,7 +75,7 @@ const Promotion = () => {
         <img
           src="promotion-images/bg-img.png"
           alt="background"
-          className="bg-black w-full h-[25vh] object-cover rounded-[1rem] sm:h-[250px] md:h-[300px]"
+          className="bg-black w-full h-[25vh] object-cover rounded-[1rem] sm:h-[250px] md:h-[300px] lg:h-[375px]"
         />
         <div className="absolute flex flex-col w-[100%] justify-center gap-[0.5rem] md:gap-[0.75rem] lg:gap-[1.25rem]">
           <h3 className="text-xl md:text-2xl lg:text-3xl text-white font-bold text-center drop-shadow-lg">
@@ -92,7 +92,7 @@ const Promotion = () => {
   );
 
   return (
-    <section className="bg-[#F6F6F6] p-[1.5rem] flex flex-col gap-[1.5rem] h-fit">
+    <section className="bg-[#F6F6F6] p-[1.5rem] flex flex-col gap-[1.5rem] h-fit pb-[3rem]">
       {productsAd}
       {giftCardAd}
       {viewMore}

@@ -9,7 +9,7 @@ const ShopNow = () => {
   const handleClick = (index) => setActiveGrp(groups[index]);
 
 	const groupOptions = (
-    <div className="w-full bg-[#F4E4C3] flex justify-center mb-[2rem]">
+    <div className="w-full bg-[#F4E4C3] flex justify-center mb-[3rem]">
       {groups.map((group, index) => (
         <button
           key={index}
@@ -25,7 +25,7 @@ const ShopNow = () => {
   );
 
   return (
-    <section className="w-full mt-[1.5rem] pb-[3rem]">
+    <section className="w-full mt-[1.5rem] pt-[1rem] pb-[5rem]">
       <h2 className="uppercase font-bold tracking-tight text-[1.5rem] text-center mb-[1rem]">
         shop now
       </h2>
@@ -39,7 +39,7 @@ const ShopNow = () => {
             <img
               src={`category-images/${activeGrp}-${category}.png`}
               alt={category}
-              className="object-cover w-[15rem] lg:w-[18rem]"
+              className="object-cover w-[15rem] lg:w-[18rem] rounded-lg"
             />
             <p className="capitalize font-semibold text-center text-lg">
               {category}
