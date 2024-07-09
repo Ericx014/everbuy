@@ -1,35 +1,19 @@
 import {useState} from "react";
+import ShopNav from "./ShopNav";
 
 const ShopNow = () => {
   const groups = ["men", "women", "kids"];
 	const categories = ["tops", "bottoms", "footwear"];
-
   const [activeGrp, setActiveGrp] = useState(groups[0]);
-
+	
   const handleClick = (index) => setActiveGrp(groups[index]);
-
-	const groupOptions = (
-    <div className="w-full bg-[#F4E4C3] flex justify-center mb-[3rem]">
-      {groups.map((group, index) => (
-        <button
-          key={index}
-          onClick={() => handleClick(index)}
-          className={`capitalize font-semibold lg:text-[1.2rem] py-4 px-8 sm:px-10 md:px-13 lg:px-16 ${
-            activeGrp === group ? "bg-[#DFCAA0]" : "bg-[#F4E4C3]"
-          }`}
-        >
-          {group}
-        </button>
-      ))}
-    </div>
-  );
 
   return (
     <section className="w-full mt-[1.5rem] pt-[1rem] pb-[5rem]">
       <h2 className="uppercase font-bold tracking-tight text-[1.5rem] text-center mb-[1rem]">
         shop now
       </h2>
-      {groupOptions}
+      <ShopNav groups={groups} activeGrp={activeGrp} handleClick={handleClick}/>
       <div className="flex flex-row justify-center flex-wrap items-center gap-[2rem] md:gap-[2.8rem] lg:gap-[3.5rem] px-[0.5rem] sm:px-[1rem] md:px-[2.8rem] lg:px-[4rem]">
         {categories.map((category, index) => (
           <div

@@ -14,7 +14,7 @@ const Navbar = () => {
       <div className="w-full flex justify-between px-[1rem] md:px-[1.8rem] lg:px-[2.5rem]">
         <h1 className="text-[1.5rem] font-[600]">Logo</h1>
         <div className="navigation-links flex justify-between items-center md:w-[30%] lg:w-[18%] lg:min-w-[18rem]">
-          <Link className="lg:text-[1.2rem]">Shop</Link>
+          <Link to="/shop" className="lg:text-[1.2rem]">Shop</Link>
           <Link className="lg:text-[1.2rem]">Explore</Link>
           <Link className="lg:text-[1.2rem]">Gift Cards</Link>
         </div>
