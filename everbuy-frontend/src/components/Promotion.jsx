@@ -19,7 +19,7 @@ const Promotion = () => {
       {promotionProducts.map((product, index) => (
         <div
           key={index}
-          className="flex flex-col justify-center items-center text-center bg-white p-[2.5rem] rounded-[1rem] w-[90vw] md:w-[345px] lg:min-w-[450px] lg:w-[40vw] lg:h-[70vh] shadow-md shadow-gray-300"
+          className="flex flex-col justify-center items-center text-center bg-white p-[2.5rem] rounded-[1rem] w-[90vw] md:w-[345px] g:min-w-[450px] lg:w-[40vw] lg:h-[70vh] shadow-md shadow-gray-300"
         >
           <h3 className="font-bold capitalize text-xl lg:text-[30px] leading-5 mb-3 tracking-tight">
             {product.name}
@@ -44,11 +44,13 @@ const Promotion = () => {
         </div>
       ))}
     </div>
-  );
+  ); 
+
+	const longCardHeight = "h-[250px] md:h-[280px] lg:h-[320px]";
 
   const giftCardAd = (
     <div className="flex justify-center">
-      <div className="flex flex-col justify-center bg-white p-[2.5rem] sm:px-[3rem] md:px-[4rem] lg:px-[6rem] rounded-[1rem] w-[90vw] md:w-[720px] lg:min-w-[920px] lg:w-[81vw] h-[250px] md:h-[300px] lg:h-[375px] shadow-md shadow-gray-300">
+      <div className={`flex flex-row justify-center lg:gap-[15%] bg-white p-[2.5rem] sm:px-[3rem] md:px-[4rem] lg:px-[6rem] rounded-[1rem] w-[90vw] md:w-[720px] lg:min-w-[920px] lg:w-[81vw] ${longCardHeight} shadow-md shadow-gray-300`}>
         <div className="flex flex-col justify-center lg:gap-[0rem]">
           <h3 className="text-xl md:text-2xl lg:text-3xl capitalize font-bold mb-1">
             gift card
@@ -65,17 +67,22 @@ const Promotion = () => {
             </button>
           </div>
         </div>
+				<div className="flex flex-col justify-center lg:w-[20rem]">
+					<img src="giftcard.png" alt="giftcard" className="object-contain" />
+				</div>
       </div>
     </div>
   );
 
   const viewMore = (
     <div className="flex justify-center">
-      <div className="flex justify-center items-center w-[90vw] md:w-[720px] lg:min-w-[920px] lg:w-[81vw]">
+      <div
+        className="flex justify-center items-center w-[90vw] md:w-[720px] lg:min-w-[920px] lg:w-[81vw]"
+      >
         <img
           src="promotion-images/bg-img.png"
           alt="background"
-          className="bg-black w-full object-cover rounded-[1rem] h-[250px] md:h-[300px] lg:h-[375px]"
+          className={`bg-black w-full object-cover rounded-[1rem] ${longCardHeight}`}
         />
         <div className="absolute flex flex-col w-[100%] justify-center gap-[0.5rem] md:gap-[0.75rem] lg:gap-[1.25rem]">
           <h3 className="text-xl md:text-2xl lg:text-3xl text-white font-bold text-center drop-shadow-lg px-[5rem]">
