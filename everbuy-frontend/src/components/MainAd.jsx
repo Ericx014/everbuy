@@ -1,6 +1,6 @@
 const MainAd = () => {
   return (
-    <section>
+    <section className="snap-start snap-mandatory snap-y">
       <div className="relative">
         <img
           src="home-img/model.png"

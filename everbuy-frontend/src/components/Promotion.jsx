@@ -14,8 +14,8 @@ const Promotion = () => {
     },
   ];
 
-  const productsAd = (
-    <div className="flex flex-row flex-wrap gap-[1.5rem] justify-center">
+	return (
+    <section className="snap-center flex flex-row flex-wrap gap-[1.5rem] justify-center bg-[#F6F6F6] py-[1.5rem]">
       {promotionProducts.map((product, index) => (
         <div
           key={index}
@@ -43,66 +43,6 @@ const Promotion = () => {
           </div>
         </div>
       ))}
-    </div>
-  ); 
-
-	const longCardHeight = "h-[250px] md:h-[280px] lg:h-[320px]";
-
-  const giftCardAd = (
-    <div className="flex justify-center">
-      <div className={`flex flex-row justify-center lg:gap-[15%] bg-white p-[2.5rem] sm:px-[3rem] md:px-[4rem] lg:px-[6rem] rounded-[1rem] w-[90vw] md:w-[720px] lg:min-w-[920px] lg:w-[81vw] ${longCardHeight} shadow-md shadow-gray-300`}>
-        <div className="flex flex-col justify-center lg:gap-[0rem]">
-          <h3 className="text-xl md:text-2xl lg:text-3xl capitalize font-bold mb-1">
-            gift card
-          </h3>
-          <p className="md:text-lg lg:text-xl leading-4 mb-6">
-            Sign up now to receive a gift card of your choice.
-          </p>
-          <div className="text-white capitalize font-semibold flex flex-row gap-5">
-            <button className="rounded-md bg-[#DFCAA0] py-2.5 px-6 lg:text-lg">
-              Explore
-            </button>
-            <button className="rounded-md bg-[#DFCAA0] py-2.5 px-6 lg:text-lg">
-              Sign up
-            </button>
-          </div>
-        </div>
-				<div className="flex flex-col justify-center lg:w-[20rem]">
-					<img src="giftcard.png" alt="giftcard" className="object-contain" />
-				</div>
-      </div>
-    </div>
-  );
-
-  const viewMore = (
-    <div className="flex justify-center">
-      <div
-        className="flex justify-center items-center w-[90vw] md:w-[720px] lg:min-w-[920px] lg:w-[81vw]"
-      >
-        <img
-          src="promotion-images/bg-img.png"
-          alt="background"
-          className={`bg-black w-full object-cover rounded-[1rem] ${longCardHeight}`}
-        />
-        <div className="absolute flex flex-col w-[100%] justify-center gap-[0.5rem] md:gap-[0.75rem] lg:gap-[1.25rem]">
-          <h3 className="text-xl md:text-2xl lg:text-3xl text-white font-bold text-center drop-shadow-lg px-[5rem]">
-            Didn't see anything you like?
-          </h3>
-          <div className="flex flex-row justify-center">
-            <button className="bg-white px-4 py-2 md:px-5 md:py-3 lg:px-6 lg:py-4 rounded-md lg:rounded-lg font-semibold tracking-tight">
-              More products
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-
-  return (
-    <section className="bg-[#F6F6F6] p-[1.5rem] flex flex-col gap-[1.5rem] h-fit pb-[3rem]">
-      {productsAd}
-      {giftCardAd}
-      {viewMore}
     </section>
   );
 };

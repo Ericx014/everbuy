@@ -18,11 +18,11 @@ const Benefits = () => {
   ];
 
   return (
-    <section className="flex overflow-x-auto snap-x snap-mandatory">
+    <section className="snap-center flex overflow-x-auto scroll-children">
       {benefits.map((benefit, index) => {
         return (
           <div
-            className="snap-center shrink-0 w-[18rem] sm:w-[60vw] md:w-[40%] lg:w-1/3 flex flex-col justify-center items-center border border-gray-300 py-6 px-12 md:px-6 lg:px-20" 
+            className="shrink-0 w-[18rem] sm:w-[60vw] md:w-[40%] lg:w-1/3 flex flex-col justify-center items-center border border-gray-300 p-12 md:px-6 lg:px-20"
             key={index}
           >
             <div>

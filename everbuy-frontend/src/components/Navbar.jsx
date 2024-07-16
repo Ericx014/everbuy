@@ -3,7 +3,7 @@ import "../css/navbar.css";
 
 const Navbar = () => {
   return (
-    <nav className="display flex w-full h-[8vh] items-center">
+    <nav className="static top-0 display flex w-full h-[8vh] items-center shadow-lg border-b-2">
       <button>
         <img
           src="icons/hamburger-icon.png"
@@ -12,20 +12,28 @@ const Navbar = () => {
         />
       </button>
       <div className="w-full flex justify-between px-[1rem] md:px-[1.8rem] lg:px-[2.5rem]">
-        <h1 className="text-[1.5rem] font-[600]">Logo</h1>
-        <div className="navigation-links flex justify-between items-center md:w-[30%] lg:w-[18%] lg:min-w-[18rem]">
-          <Link to="/shop" className="lg:text-[1.2rem]">Shop</Link>
-          <Link className="lg:text-[1.2rem]">Explore</Link>
-          <Link className="lg:text-[1.2rem]">Gift Cards</Link>
+        <div className="flex flex-row gap-20">
+          <Link to="/">
+            <h1 className="text-[1.6rem] font-bold">Logo</h1>
+          </Link>
+          <div className="navigation-links flex justify-center gap-5 items-center">
+            <Link to="/shop" className="lg:text-[1.2rem] font-semibold">
+              Shop
+            </Link>
+            {/* <Link className="lg:text-[1.2rem]">Explore</Link> */}
+            <Link to="/giftcards" className="lg:text-[1.2rem] font-semibold">
+              Gift Cards
+            </Link>
+          </div>
         </div>
-        <div className="flex justify-between items-center w-[40%] sm:w-[25%] md:w-[20%] lg:w-[10%] lg:min-w-[150px]">
-          <Link>
+        <div className="flex gap-4 items-center">
+          {/* <Link>
             <img
               src="icons/search-icon.png"
               alt="search icon"
               className="w-[1.3rem]"
             />
-          </Link>
+          </Link> */}
           <Link>
             <img
               src="icons/heart-icon.png"

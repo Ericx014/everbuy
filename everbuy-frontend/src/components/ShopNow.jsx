@@ -9,7 +9,7 @@ const ShopNow = () => {
   const handleClick = (index) => setActiveGrp(groups[index]);
 
   return (
-    <section className="w-full mt-[1.5rem] pt-[1rem] pb-[5rem]">
+    <section className="snap-center w-full mt-[1.5rem] pt-[1rem] pb-[5rem]">
       <h2 className="uppercase font-bold tracking-tight text-[1.5rem] text-center mb-[1rem]">
         shop now
       </h2>
