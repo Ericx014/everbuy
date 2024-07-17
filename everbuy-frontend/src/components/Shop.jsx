@@ -1,260 +1,33 @@
-import {useState} from "react";
-import {Link} from "react-router-dom";
+import {useContext, useState} from "react";
 import ShopNav from "./ShopNav";
+import Catalogue from "./Catalogue";
+import ProductsList from "./ProductsList";
+import {ProdContext} from "../App";
 
 const Shop = () => {
   const groups = ["men", "women", "kids"];
   const [activeGrp, setActiveGrp] = useState(groups[0]);
-
+  const {setActiveProd, allProd} = useContext(ProdContext);
   const handleClick = (index) => setActiveGrp(groups[index]);
 
-  const menProductInfo = [
-    {
-      image: "product-images/loosefitprinted1.png",
-      name: "Loose Fit Printed T-Shirt",
-      price: "59.90",
-    },
-    {
-      image: "product-images/loosefitprinted1.png",
-      name: "Loose Fit Printed T-Shirt",
-      price: "59.90",
-    },
-    {
-      image: "product-images/loosefitprinted1.png",
-      name: "Loose Fit Printed T-Shirt",
-      price: "59.90",
-    },
-    {
-      image: "product-images/loosefitprinted1.png",
-      name: "Loose Fit Printed T-Shirt",
-      price: "59.90",
-    },
-    {
-      image: "product-images/loosefitprinted1.png",
-      name: "Loose Fit Printed T-Shirt",
-      price: "59.90",
-    },
-    {
-      image: "product-images/loosefitprinted1.png",
-      name: "Loose Fit Printed T-Shirt",
-      price: "59.90",
-    },
-    {
-      image: "product-images/loosefitprinted1.png",
-      name: "Loose Fit Printed T-Shirt",
-      price: "59.90",
-    },
-    {
-      image: "product-images/loosefitprinted1.png",
-      name: "Loose Fit Printed T-Shirt",
-      price: "59.90",
-    },
-    {
-      image: "product-images/loosefitprinted1.png",
-      name: "Loose Fit Printed T-Shirt",
-      price: "59.90",
-    },
-    {
-      image: "product-images/loosefitprinted1.png",
-      name: "Loose Fit Printed T-Shirt",
-      price: "59.90",
-    },
-    {
-      image: "product-images/loosefitprinted1.png",
-      name: "Loose Fit Printed T-Shirt",
-      price: "59.90",
-    },
-    {
-      image: "product-images/loosefitprinted1.png",
-      name: "Loose Fit Printed T-Shirt",
-      price: "59.90",
-    },
-  ];
+  const handleSelect = (product) => {
+    setActiveProd(product);
+    localStorage.setItem("activeProd", JSON.stringify(product));
+    console.log(product);
+  };
 
-  const womenProductInfo = [
-    {
-      image: "product-images/buttonfrontdress.png",
-      name: "Button-Front Dress",
-      price: "99.95",
-    },
-    {
-      image: "product-images/buttonfrontdress.png",
-      name: "Button-Front Dress",
-      price: "99.95",
-    },
-    {
-      image: "product-images/buttonfrontdress.png",
-      name: "Button-Front Dress",
-      price: "99.95",
-    },
-    {
-      image: "product-images/buttonfrontdress.png",
-      name: "Button-Front Dress",
-      price: "99.95",
-    },
-    {
-      image: "product-images/buttonfrontdress.png",
-      name: "Button-Front Dress",
-      price: "99.95",
-    },
-    {
-      image: "product-images/buttonfrontdress.png",
-      name: "Button-Front Dress",
-      price: "99.95",
-    },
-    {
-      image: "product-images/buttonfrontdress.png",
-      name: "Button-Front Dress",
-      price: "99.95",
-    },
-    {
-      image: "product-images/buttonfrontdress.png",
-      name: "Button-Front Dress",
-      price: "99.95",
-    },
-    {
-      image: "product-images/buttonfrontdress.png",
-      name: "Button-Front Dress",
-      price: "99.95",
-    },
-    {
-      image: "product-images/buttonfrontdress.png",
-      name: "Button-Front Dress",
-      price: "99.95",
-    },
-    {
-      image: "product-images/buttonfrontdress.png",
-      name: "Button-Front Dress",
-      price: "99.95",
-    },
-    {
-      image: "product-images/buttonfrontdress.png",
-      name: "Button-Front Dress",
-      price: "99.95",
-    },
-  ];
-
-  const kidsProductsInfo = [
-    {
-      image: "product-images/kidslongsleeve.png",
-      name: "Ribbon Cotton Jersey Cropped Top",
-      price: "39.95",
-    },
-    {
-      image: "product-images/kidslongsleeve.png",
-      name: "Ribbon Cotton Jersey Cropped Top",
-      price: "39.95",
-    },
-    {
-      image: "product-images/kidslongsleeve.png",
-      name: "Ribbon Cotton Jersey Cropped Top",
-      price: "39.95",
-    },
-    {
-      image: "product-images/kidslongsleeve.png",
-      name: "Ribbon Cotton Jersey Cropped Top",
-      price: "39.95",
-    },
-    {
-      image: "product-images/kidslongsleeve.png",
-      name: "Ribbon Cotton Jersey Cropped Top",
-      price: "39.95",
-    },
-    {
-      image: "product-images/kidslongsleeve.png",
-      name: "Ribbon Cotton Jersey Cropped Top",
-      price: "39.95",
-    },
-    {
-      image: "product-images/kidslongsleeve.png",
-      name: "Ribbon Cotton Jersey Cropped Top",
-      price: "39.95",
-    },
-    {
-      image: "product-images/kidslongsleeve.png",
-      name: "Ribbon Cotton Jersey Cropped Top",
-      price: "39.95",
-    },
-    {
-      image: "product-images/kidslongsleeve.png",
-      name: "Ribbon Cotton Jersey Cropped Top",
-      price: "39.95",
-    },
-    {
-      image: "product-images/kidslongsleeve.png",
-      name: "Ribbon Cotton Jersey Cropped Top",
-      price: "39.95",
-    },
-    {
-      image: "product-images/kidslongsleeve.png",
-      name: "Ribbon Cotton Jersey Cropped Top",
-      price: "39.95",
-    },
-    {
-      image: "product-images/kidslongsleeve.png",
-      name: "Ribbon Cotton Jersey Cropped Top",
-      price: "39.95",
-    },
-  ];
+	const menProds = allProd.filter((product) => product.group === "men");
+	const womenProds = allProd.filter((product) => product.group === "women");
+	const kidsProds = allProd.filter((product) => product.group === "kids");
 
   const menProducts = (
-    <section className="flex flex-wrap justify-center gap-5 md:px-[7rem] lg:px-[10rem] pb-6">
-      {menProductInfo.map((product) => (
-        <Link>
-          <div className="text-center lg:w-[265px] lg:h-[400px] mb-10">
-            <div className="bg-[#F4F4F4] lg:mb-4">
-              <img
-                className="lg:w-[265px] lg:h-[360]"
-                src={product.image}
-                alt={product.name}
-              />
-            </div>
-            <p>{product.name}</p>
-            <p>RM{product.price}</p>
-          </div>
-        </Link>
-      ))}
-    </section>
+    <ProductsList productInfo={menProds} handleSelect={handleSelect} />
   );
-
   const womenProducts = (
-    <section className="flex flex-wrap justify-center gap-5 md:px-[7rem] lg:px-[10rem] pb-6">
-      {womenProductInfo.map((product) => (
-        <Link>
-          <div className="text-center lg:w-[265px] lg:h-[400px] mb-10">
-            <div className="bg-[#F4F4F4] lg:mb-4">
-              <img
-                className="lg:w-[265px] lg:h-[360]"
-                src={product.image}
-                alt={product.name}
-              />
-            </div>
-            <p>{product.name}</p>
-            <p>RM{product.price}</p>
-          </div>
-        </Link>
-      ))}
-    </section>
+    <ProductsList productInfo={womenProds} handleSelect={handleSelect} />
   );
-
   const kidsProducts = (
-    <section className="flex flex-wrap justify-center gap-5 md:px-[7rem] lg:px-[10rem] pb-6">
-      {kidsProductsInfo.map((product) => (
-        <Link>
-          <div className="text-center lg:w-[265px] lg:h-[400px] mb-10">
-            <div className="bg-[#F4F4F4] lg:mb-4">
-              <img
-                className="lg:w-[265px] lg:h-[360]"
-                src={product.image}
-                alt={product.name}
-              />
-            </div>
-            <p>{product.name}</p>
-            <p>RM{product.price}</p>
-          </div>
-        </Link>
-      ))}
-    </section>
+    <ProductsList productInfo={kidsProds} handleSelect={handleSelect} />
   );
 
   return (
@@ -264,9 +37,12 @@ const Shop = () => {
         activeGrp={activeGrp}
         handleClick={handleClick}
       />
-      {activeGrp == "men" && menProducts}
-      {activeGrp == "women" && womenProducts}
-      {activeGrp == "kids" && kidsProducts}
+      <Catalogue
+        menProds={menProducts}
+        womenProds={womenProducts}
+        kidsProds={kidsProducts}
+        activeGrp={activeGrp}
+      />
     </section>
   );
 };

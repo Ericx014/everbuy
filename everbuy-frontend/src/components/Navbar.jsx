@@ -2,8 +2,12 @@ import {Link} from "react-router-dom";
 import "../css/navbar.css";
 
 const Navbar = () => {
+	const clearActiveProd = () => {
+		localStorage.removeItem("activeProd");
+	}
+
   return (
-    <nav className="static top-0 display flex w-full h-[8vh] items-center shadow-lg border-b-2">
+    <nav className="static top-0 display flex w-full h-[8vh] items-center shadow-md border-b-2">
       <button>
         <img
           src="icons/hamburger-icon.png"
@@ -17,7 +21,7 @@ const Navbar = () => {
             <h1 className="text-[1.6rem] font-bold">Logo</h1>
           </Link>
           <div className="navigation-links flex justify-center gap-5 items-center">
-            <Link to="/shop" className="lg:text-[1.2rem] font-semibold">
+            <Link to="/shop" className="lg:text-[1.2rem] font-semibold" onClick={() => clearActiveProd()}>
               Shop
             </Link>
             {/* <Link className="lg:text-[1.2rem]">Explore</Link> */}
@@ -34,7 +38,7 @@ const Navbar = () => {
               className="w-[1.3rem]"
             />
           </Link> */}
-          <Link>
+          <Link to="/liked">
             <img
               src="icons/heart-icon.png"
               alt="favourites icon"
