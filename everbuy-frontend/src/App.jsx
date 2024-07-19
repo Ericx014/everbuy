@@ -18,6 +18,7 @@ const menProductInfo = [
     price: "59.90",
     liked: false,
     group: "men",
+    category: "shirt",
   },
   {
     id: 1102,
@@ -26,6 +27,7 @@ const menProductInfo = [
     price: "59.90",
     liked: false,
     group: "men",
+    category: "shirt",
   },
   {
     id: 1103,
@@ -34,6 +36,7 @@ const menProductInfo = [
     price: "59.90",
     liked: false,
     group: "men",
+    category: "shirt",
   },
   {
     id: 1104,
@@ -42,6 +45,7 @@ const menProductInfo = [
     price: "59.90",
     liked: false,
     group: "men",
+    category: "shirt",
   },
   {
     id: 1105,
@@ -50,6 +54,7 @@ const menProductInfo = [
     price: "59.90",
     liked: false,
     group: "men",
+    category: "shirt",
   },
   {
     id: 1106,
@@ -58,6 +63,7 @@ const menProductInfo = [
     price: "59.90",
     liked: false,
     group: "men",
+    category: "shirt",
   },
   {
     id: 1107,
@@ -66,6 +72,7 @@ const menProductInfo = [
     price: "59.90",
     liked: false,
     group: "men",
+    category: "shirt",
   },
   {
     id: 1108,
@@ -74,38 +81,7 @@ const menProductInfo = [
     price: "59.90",
     liked: false,
     group: "men",
-  },
-  {
-    id: 1109,
-    image: "product-images/loosefitprinted1.png",
-    name: "Loose Fit Printed T-Shirt",
-    price: "59.90",
-    liked: false,
-    group: "men",
-  },
-  {
-    id: 1110,
-    image: "product-images/loosefitprinted1.png",
-    name: "Loose Fit Printed T-Shirt",
-    price: "59.90",
-    liked: false,
-    group: "men",
-  },
-  {
-    id: 1111,
-    image: "product-images/loosefitprinted1.png",
-    name: "Loose Fit Printed T-Shirt",
-    price: "59.90",
-    liked: false,
-    group: "men",
-  },
-  {
-    id: 1112,
-    image: "product-images/loosefitprinted1.png",
-    name: "Loose Fit Printed T-Shirt",
-    price: "59.90",
-    liked: false,
-    group: "men",
+    category: "shirt",
   },
 ];
 const womenProductInfo = [
@@ -116,6 +92,7 @@ const womenProductInfo = [
     price: "99.95",
     liked: false,
     group: "women",
+    category: "shirt",
   },
   {
     id: 2102,
@@ -124,6 +101,7 @@ const womenProductInfo = [
     price: "99.95",
     liked: false,
     group: "women",
+    category: "shirt",
   },
   {
     id: 2103,
@@ -132,6 +110,7 @@ const womenProductInfo = [
     price: "99.95",
     liked: false,
     group: "women",
+    category: "shirt",
   },
   {
     id: 2104,
@@ -140,6 +119,7 @@ const womenProductInfo = [
     price: "99.95",
     liked: false,
     group: "women",
+    category: "shirt",
   },
   {
     id: 2105,
@@ -148,6 +128,7 @@ const womenProductInfo = [
     price: "99.95",
     liked: false,
     group: "women",
+    category: "shirt",
   },
   {
     id: 2106,
@@ -156,6 +137,7 @@ const womenProductInfo = [
     price: "99.95",
     liked: false,
     group: "women",
+    category: "shirt",
   },
   {
     id: 2107,
@@ -164,6 +146,7 @@ const womenProductInfo = [
     price: "99.95",
     liked: false,
     group: "women",
+    category: "shirt",
   },
   {
     id: 2108,
@@ -172,38 +155,7 @@ const womenProductInfo = [
     price: "99.95",
     liked: false,
     group: "women",
-  },
-  {
-    id: 2109,
-    image: "product-images/buttonfrontdress.png",
-    name: "Button-Front Dress",
-    price: "99.95",
-    liked: false,
-    group: "women",
-  },
-  {
-    id: 2110,
-    image: "product-images/buttonfrontdress.png",
-    name: "Button-Front Dress",
-    price: "99.95",
-    liked: false,
-    group: "women",
-  },
-  {
-    id: 2111,
-    image: "product-images/buttonfrontdress.png",
-    name: "Button-Front Dress",
-    price: "99.95",
-    liked: false,
-    group: "women",
-  },
-  {
-    id: 2112,
-    image: "product-images/buttonfrontdress.png",
-    name: "Button-Front Dress",
-    price: "99.95",
-    liked: false,
-    group: "women",
+    category: "shirt",
   },
 ];
 const kidsProductsInfo = [
@@ -214,6 +166,7 @@ const kidsProductsInfo = [
     price: "39.95",
     liked: false,
     group: "kids",
+    category: "shirt",
   },
   {
     id: 3102,
@@ -222,6 +175,7 @@ const kidsProductsInfo = [
     price: "39.95",
     liked: false,
     group: "kids",
+    category: "shirt",
   },
   {
     id: 3103,
@@ -230,6 +184,7 @@ const kidsProductsInfo = [
     price: "39.95",
     liked: false,
     group: "kids",
+    category: "shirt",
   },
   {
     id: 3104,
@@ -238,6 +193,7 @@ const kidsProductsInfo = [
     price: "39.95",
     liked: false,
     group: "kids",
+    category: "shirt",
   },
   {
     id: 3105,
@@ -246,6 +202,7 @@ const kidsProductsInfo = [
     price: "39.95",
     liked: false,
     group: "kids",
+    category: "shirt",
   },
   {
     id: 3106,
@@ -254,6 +211,7 @@ const kidsProductsInfo = [
     price: "39.95",
     liked: false,
     group: "kids",
+    category: "shirt",
   },
   {
     id: 3107,
@@ -262,6 +220,7 @@ const kidsProductsInfo = [
     price: "39.95",
     liked: false,
     group: "kids",
+    category: "shirt",
   },
   {
     id: 3108,
@@ -270,38 +229,7 @@ const kidsProductsInfo = [
     price: "39.95",
     liked: false,
     group: "kids",
-  },
-  {
-    id: 3109,
-    image: "product-images/kidslongsleeve.png",
-    name: "Ribbon Cotton Jersey Cropped Top",
-    price: "39.95",
-    liked: false,
-    group: "kids",
-  },
-  {
-    id: 3110,
-    image: "product-images/kidslongsleeve.png",
-    name: "Ribbon Cotton Jersey Cropped Top",
-    price: "39.95",
-    liked: false,
-    group: "kids",
-  },
-  {
-    id: 3111,
-    image: "product-images/kidslongsleeve.png",
-    name: "Ribbon Cotton Jersey Cropped Top",
-    price: "39.95",
-    liked: false,
-    group: "kids",
-  },
-  {
-    id: 3112,
-    image: "product-images/kidslongsleeve.png",
-    name: "Ribbon Cotton Jersey Cropped Top",
-    price: "39.95",
-    liked: false,
-    group: "kids",
+    category: "shirt",
   },
 ];
 
