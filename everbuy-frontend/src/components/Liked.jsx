@@ -9,7 +9,7 @@ const Liked = () => {
       {likedProd.length > 0 ? (
         likedProd.map((prod, index) => (
           <div key={index}>
-            <p>{prod.name}</p>
+            <p>{prod.id}: {prod.name}</p>
           </div>
         ))
       ) : (

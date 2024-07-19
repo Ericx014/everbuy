@@ -320,6 +320,18 @@ const App = () => {
     ...kidsProductsInfo,
   ]);
 
+	useEffect(() => {
+		const updatedAllProd = allProd.map((prod) => {
+			for(let i=0; i<likedProd.length; i++){
+				if (likedProd[i].id === prod.id){
+					return likedProd[i];
+				}
+			}
+			return prod;
+		});
+		setAllProd(updatedAllProd);
+	}, []);
+
   useEffect(() => {
     localStorage.setItem("activeProd", JSON.stringify(activeProd));
   }, [activeProd]);
