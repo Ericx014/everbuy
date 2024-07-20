@@ -6,6 +6,7 @@ import Shop from "./components/Shop";
 import Giftcards from "./components/Giftcards";
 import Product from "./components/Product";
 import Liked from "./components/Liked";
+import Cart from "./components/Cart";
 import {useEffect, createContext, useState} from "react";
 
 export const ProdContext = createContext();
@@ -160,12 +161,13 @@ const womenProductInfo = [
 ];
 const kidsProductsInfo = [
   {
-    id: 3101,
+    id: 3100,
     image: "product-images/kidslongsleeve.png",
     name: "Ribbon Cotton Jersey Cropped Top",
     price: "39.95",
     liked: false,
     group: "kids",
+    category: "shirt",
     category: "shirt",
   },
   {
@@ -242,23 +244,26 @@ const App = () => {
     JSON.parse(localStorage.getItem("likedProducts")) || [];
   const [likedProd, setLikedProd] = useState(initialLikedProd);
 
+  const intialCartProd = JSON.parse(localStorage.getItem("cartProducts")) || [];
+  const [cartProd, setCartProd] = useState(intialCartProd);
+
   const [allProd, setAllProd] = useState([
     ...menProductInfo,
     ...womenProductInfo,
     ...kidsProductsInfo,
   ]);
 
-	useEffect(() => {
-		const updatedAllProd = allProd.map((prod) => {
-			for(let i=0; i<likedProd.length; i++){
-				if (likedProd[i].id === prod.id){
-					return likedProd[i];
-				}
-			}
-			return prod;
-		});
-		setAllProd(updatedAllProd);
-	}, []);
+  useEffect(() => {
+    const updatedAllProd = allProd.map((prod) => {
+      for (let i = 0; i < likedProd.length; i++) {
+        if (likedProd[i].id === prod.id) {
+          return likedProd[i];
+        }
+      }
+      return prod;
+    });
+    setAllProd(updatedAllProd);
+  }, []);
 
   useEffect(() => {
     localStorage.setItem("activeProd", JSON.stringify(activeProd));
@@ -267,6 +272,10 @@ const App = () => {
   useEffect(() => {
     localStorage.setItem("likedProducts", JSON.stringify(likedProd));
   }, [likedProd]);
+
+  useEffect(() => {
+    localStorage.setItem("cartProducts", JSON.stringify(cartProd));
+  }, [cartProd]);
 
   return (
     <>
@@ -279,6 +288,8 @@ const App = () => {
           menProductInfo,
           womenProductInfo,
           kidsProductsInfo,
+          cartProd,
+          setCartProd,
           allProd,
           setAllProd,
         }}
@@ -291,6 +302,7 @@ const App = () => {
             <Route path="/product" element={<Product />} />
             <Route path="/liked" element={<Liked />} />
             <Route path="/giftcards" element={<Giftcards />} />
+						<Route path="/cart" element={<Cart />} />
           </Routes>
           <Footer />
         </BrowserRouter>

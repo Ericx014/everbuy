@@ -11,7 +11,12 @@ const Product = () => {
     setLikedProd,
     allProd,
     setAllProd,
+    cartProd,
+    setCartProd,
   } = useContext(ProdContext);
+
+  const lorem50 =
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nam culpa, voluptatum alias minima atque! Eius vero quos repudiandae expedita doloribus enim, ipsam natus veritatis assumenda illo obcaecati temporibus tenetur a odio tempore perspiciatis corporis quis hic. Veritatis saepe maxime, repellat velit minima porro totam debitis temporibus, voluptatum suscipit voluptate.";
 
   const [quantity, setQuantity] = useState(0);
 
@@ -57,7 +62,7 @@ const Product = () => {
     }
   };
 
-	const quantityInput = (
+  const quantityInput = (
     <div className="flex flex-row justify-center bg-white w-fit items-center text-center">
       <button
         className="border-[#e3e3e3] border w-8 h-8 flex items-center justify-center rounded-l-md"
@@ -77,11 +82,39 @@ const Product = () => {
     </div>
   );
 
-	const likeButton = (
+  const likeButton = (
     <button className="items-center" onClick={() => handleLike(activeProd)}>
       {activeProd.liked ? <FaHeart /> : <FaRegHeart />}
     </button>
   );
+
+  const handleCartButton = () => {
+    const quantityError = "Quantity cannot be zero";
+    if (quantity === 0) {
+      console.log(quantityError);
+    } else {
+			const cartProdFound = cartProd.find((prod) => prod.id === activeProd.id);
+			if (!cartProdFound){
+				const itemToCart = {...activeProd, quantity: quantity};
+				const newCartProds = [...cartProd, itemToCart];
+				setCartProd(newCartProds);
+				setQuantity(0);
+				console.log("New cart prods", newCartProds);				
+
+			} else {
+				console.log("Cart item found", cartProdFound);
+				const newQuantity = cartProdFound.quantity + quantity;
+				const newExistingCartProd = {...cartProdFound, quantity: newQuantity};
+				const newCartProds = cartProd.map((prod) => {
+					if (prod.id === cartProdFound.id){
+						return newExistingCartProd
+					}
+					return prod;
+				})
+				setCartProd(newCartProds);
+			}
+    }
+  };
 
   return (
     <section className="h-full">
@@ -97,15 +130,7 @@ const Product = () => {
             </div>
             <div className="flex flex-col py-24 justify-center w-[40%]">
               <p className="font-bold text-[1.5rem] pb-2">{activeProd.name}</p>
-              <p className="pb-9">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Placeat distinctio minima deserunt quod eos! Ratione eveniet,
-                aspernatur eaque nihil velit at neque quos libero tempora
-                quaerat tempore blanditiis odit modi architecto rem autem alias
-                quidem enim minus, praesentium, doloremque cum perspiciatis
-                repellendus voluptate? Dignissimos qui nam placeat cumque
-                repellat expedita?
-              </p>
+              <p className="pb-9">{lorem50}</p>
               <div className="flex flex-row items-center gap-3 pb-4">
                 <p className="text-[1.2rem] font-semibold pr-16">
                   RM{activeProd.price}
@@ -114,7 +139,10 @@ const Product = () => {
                 {quantityInput}
               </div>
               <div className="flex flew-row items-center gap-4">
-                <button className="bg-[#F4E4C3] py-3 w-36 rounded-md transition-all hover:bg-[#8b6823] hover:text-white">
+                <button
+                  onClick={() => handleCartButton()}
+                  className="bg-[#F4E4C3] py-3 w-36 rounded-md transition-all hover:bg-[#8b6823] hover:text-white"
+                >
                   Add to cart
                 </button>
                 <button className="bg-[#F4E4C3] py-3 w-36 rounded-md transition-all hover:bg-[#8b6823] hover:text-white">

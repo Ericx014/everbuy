@@ -1,8 +1,8 @@
 import {useContext, useState} from "react";
+import {ProdContext} from "../App";
 import ShopNav from "./ShopNav";
 import Catalogue from "./Catalogue";
 import ProductsList from "./ProductsList";
-import {ProdContext} from "../App";
 
 const Shop = () => {
   const groups = ["men", "women", "kids"];
@@ -16,9 +16,9 @@ const Shop = () => {
     console.log(product);
   };
 
-	const menProds = allProd.filter((product) => product.group === "men");
-	const womenProds = allProd.filter((product) => product.group === "women");
-	const kidsProds = allProd.filter((product) => product.group === "kids");
+  const menProds = allProd.filter((product) => product.group === "men");
+  const womenProds = allProd.filter((product) => product.group === "women");
+  const kidsProds = allProd.filter((product) => product.group === "kids");
 
   const menProducts = (
     <ProductsList productInfo={menProds} handleSelect={handleSelect} />

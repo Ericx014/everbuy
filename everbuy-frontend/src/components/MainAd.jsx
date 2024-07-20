@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const MainAd = () => {
   return (
     <section className="snap-start snap-mandatory snap-y">
@@ -16,9 +18,11 @@ const MainAd = () => {
             jeans, shorts, watches, bags
           </p>
           <div>
-            <button className="bg-white text-black uppercase py-3 px-5 rounded-[0.3rem] font-bold">
-              Shop now
-            </button>
+            <Link to="/shop">
+							<button className="bg-white text-black uppercase py-3 px-5 rounded-[0.3rem] font-bold hover:scale-110 transition-all">
+								Shop now
+							</button>
+						</Link>
           </div>
         </div>
       </div>

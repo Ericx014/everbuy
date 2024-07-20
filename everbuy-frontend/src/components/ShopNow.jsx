@@ -1,4 +1,5 @@
 import {useState} from "react";
+// import { Link } from "react-router-dom";
 import ShopNav from "./ShopNav";
 
 const ShopNow = () => {
@@ -13,22 +14,22 @@ const ShopNow = () => {
       <h2 className="uppercase font-bold tracking-tight text-[1.5rem] text-center mb-[1rem]">
         shop now
       </h2>
-      <ShopNav groups={groups} activeGrp={activeGrp} handleClick={handleClick}/>
+      <ShopNav groups={groups} activeGrp={activeGrp} handleClick={handleClick} />
       <div className="flex flex-row justify-center flex-wrap items-center gap-[2rem] md:gap-[2.8rem] lg:gap-[3.5rem] px-[0.5rem] sm:px-[1rem] md:px-[2.8rem] lg:px-[4rem]">
         {categories.map((category, index) => (
-          <div
-            key={index}
-            className="flex flex-col justify-center gap-[0.75rem]"
-          >
-            <img
-              src={`category-images/${activeGrp}-${category}.png`}
-              alt={category}
-              className="object-cover w-[15rem] lg:w-[18rem] rounded-lg"
-            />
-            <p className="capitalize font-semibold text-center text-lg">
-              {category}
-            </p>
-          </div>
+					<div
+						key={index}
+						className="flex flex-col justify-center gap-[0.75rem]"
+					>
+						<img
+							src={`category-images/${activeGrp}-${category}.png`}
+							alt={category}
+							className="object-cover w-[15rem] lg:w-[18rem] rounded-lg hover:scale-105 transition-all"
+						/>
+						<p className="capitalize font-semibold text-center text-lg">
+							{category}
+						</p>
+					</div>
         ))}
       </div>
     </section>

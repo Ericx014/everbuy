@@ -52,7 +52,7 @@ const Navbar = () => {
               className="w-[1.3rem]"
             />
           </Link>
-          <Link>
+          <Link to="/cart">
             <img
               src="icons/cart-icon.png"
               alt="cart icon"

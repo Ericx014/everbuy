@@ -3,11 +3,12 @@ import {Link} from "react-router-dom";
 import {ProdContext} from "../App";
 
 const SimilarProducts = ({group, category}) => {
-  const {allProd, setActiveProd} = useContext(ProdContext);
+  const {allProd, activeProd, setActiveProd} = useContext(ProdContext);
 
+	//Try to only add 4 products
   const similarProd = allProd.filter(
-    (prod) => group === prod.group && category === prod.category
-  );
+    (prod) => group === prod.group && category === prod.category && prod.id !== activeProd.id
+  ).slice(0, 6);;
 
   const handleSelect = (product) => {
     setActiveProd(product);
@@ -16,7 +17,7 @@ const SimilarProducts = ({group, category}) => {
   };
 
   const prodToDisplay = (
-    <div className="w-fit flex flex-row flex-wrap gap-7 justify-center">
+    <div className="w-fit flex flex-row flex-wrap gap-7 justify-center px-[20rem]">
       {similarProd.map((product, index) => (
         <Link to="/product" key={index} onClick={() => handleSelect(product)}>
           <div className="text-center lg:w-[265px] lg:h-[400px] mb-10">
