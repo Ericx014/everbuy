@@ -12,7 +12,7 @@ const ViewMore = () => {
             Didn't see anything you like?
           </h3>
           <div className="flex flex-row justify-center">
-            <button className="bg-white px-4 py-2 md:px-5 md:py-3 lg:px-6 lg:py-4 rounded-md lg:rounded-lg font-semibold tracking-tight">
+            <button className="bg-white px-4 py-2 md:px-5 md:py-3 lg:px-6 lg:py-4 rounded-md lg:rounded-lg font-semibold tracking-tight hover:scale-110 transition-all">
               More products
             </button>
           </div>

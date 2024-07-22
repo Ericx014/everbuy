@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 const MainAd = () => {
   return (
@@ -19,10 +19,10 @@ const MainAd = () => {
           </p>
           <div>
             <Link to="/shop">
-							<button className="bg-white text-black uppercase py-3 px-5 rounded-[0.3rem] font-bold hover:scale-110 transition-all">
-								Shop now
-							</button>
-						</Link>
+              <button className="bg-white text-black uppercase py-3 px-5 rounded-[0.3rem] font-bold hover:scale-110 transition-all">
+                Shop now
+              </button>
+            </Link>
           </div>
         </div>
       </div>

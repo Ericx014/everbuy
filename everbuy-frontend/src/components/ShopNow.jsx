@@ -15,7 +15,7 @@ const ShopNow = () => {
         shop now
       </h2>
       <ShopNav groups={groups} activeGrp={activeGrp} handleClick={handleClick} />
-      <div className="flex flex-row justify-center flex-wrap items-center gap-[2rem] md:gap-[2.8rem] lg:gap-[3.5rem] px-[0.5rem] sm:px-[1rem] md:px-[2.8rem] lg:px-[4rem]">
+      <div className="flex flex-row justify-center flex-wrap items-center gap-[2rem] md:gap-[2.8rem] lg:gap-[3.5rem] px-[0.5rem] sm:px-[1rem] md:px-[2.8rem] lg:px-[4rem] mt-[3rem]">
         {categories.map((category, index) => (
 					<div
 						key={index}

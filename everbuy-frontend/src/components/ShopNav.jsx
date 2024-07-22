@@ -1,6 +1,6 @@
 const ShopNav = ({groups, activeGrp, handleClick}) => {
 	return (
-    <div className="w-full bg-[#F4E4C3] flex justify-center mb-[3rem]">
+    <div className="w-full bg-[#F4E4C3] flex justify-center">
       {groups.map((group, index) => (
         <button
           key={index}

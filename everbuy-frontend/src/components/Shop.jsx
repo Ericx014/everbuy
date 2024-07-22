@@ -7,27 +7,21 @@ import ProductsList from "./ProductsList";
 const Shop = () => {
   const groups = ["men", "women", "kids"];
   const [activeGrp, setActiveGrp] = useState(groups[0]);
-  const {setActiveProd, allProd} = useContext(ProdContext);
+  const {allProd} = useContext(ProdContext);
   const handleClick = (index) => setActiveGrp(groups[index]);
-
-  const handleSelect = (product) => {
-    setActiveProd(product);
-    localStorage.setItem("activeProd", JSON.stringify(product));
-    console.log(product);
-  };
 
   const menProds = allProd.filter((product) => product.group === "men");
   const womenProds = allProd.filter((product) => product.group === "women");
   const kidsProds = allProd.filter((product) => product.group === "kids");
 
   const menProducts = (
-    <ProductsList productInfo={menProds} handleSelect={handleSelect} />
+    <ProductsList productInfo={menProds} />
   );
   const womenProducts = (
-    <ProductsList productInfo={womenProds} handleSelect={handleSelect} />
+    <ProductsList productInfo={womenProds} />
   );
   const kidsProducts = (
-    <ProductsList productInfo={kidsProds} handleSelect={handleSelect} />
+    <ProductsList productInfo={kidsProds} />
   );
 
   return (

@@ -15,7 +15,7 @@ const Promotion = () => {
   ];
 
 	return (
-    <section className="snap-center flex flex-row flex-wrap gap-[1.5rem] justify-center bg-[#F6F6F6] py-[1.5rem]">
+    <section className="snap-center flex flex-row flex-wrap gap-[1.5rem] justify-center bg-[#F6F6F6] py-[2.5rem]">
       {promotionProducts.map((product, index) => (
         <div
           key={index}

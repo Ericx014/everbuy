@@ -19,7 +19,7 @@ const menProductInfo = [
     price: "59.90",
     liked: false,
     group: "men",
-    category: "shirt",
+    category: "tops",
   },
   {
     id: 1102,
@@ -28,7 +28,7 @@ const menProductInfo = [
     price: "59.90",
     liked: false,
     group: "men",
-    category: "shirt",
+    category: "tops",
   },
   {
     id: 1103,
@@ -37,7 +37,7 @@ const menProductInfo = [
     price: "59.90",
     liked: false,
     group: "men",
-    category: "shirt",
+    category: "tops",
   },
   {
     id: 1104,
@@ -46,7 +46,7 @@ const menProductInfo = [
     price: "59.90",
     liked: false,
     group: "men",
-    category: "shirt",
+    category: "tops",
   },
   {
     id: 1105,
@@ -55,7 +55,7 @@ const menProductInfo = [
     price: "59.90",
     liked: false,
     group: "men",
-    category: "shirt",
+    category: "tops",
   },
   {
     id: 1106,
@@ -64,7 +64,7 @@ const menProductInfo = [
     price: "59.90",
     liked: false,
     group: "men",
-    category: "shirt",
+    category: "tops",
   },
   {
     id: 1107,
@@ -73,7 +73,7 @@ const menProductInfo = [
     price: "59.90",
     liked: false,
     group: "men",
-    category: "shirt",
+    category: "tops",
   },
   {
     id: 1108,
@@ -82,7 +82,7 @@ const menProductInfo = [
     price: "59.90",
     liked: false,
     group: "men",
-    category: "shirt",
+    category: "tops",
   },
 ];
 const womenProductInfo = [
@@ -93,7 +93,7 @@ const womenProductInfo = [
     price: "99.95",
     liked: false,
     group: "women",
-    category: "shirt",
+    category: "tops",
   },
   {
     id: 2102,
@@ -102,7 +102,7 @@ const womenProductInfo = [
     price: "99.95",
     liked: false,
     group: "women",
-    category: "shirt",
+    category: "tops",
   },
   {
     id: 2103,
@@ -111,7 +111,7 @@ const womenProductInfo = [
     price: "99.95",
     liked: false,
     group: "women",
-    category: "shirt",
+    category: "tops",
   },
   {
     id: 2104,
@@ -120,7 +120,7 @@ const womenProductInfo = [
     price: "99.95",
     liked: false,
     group: "women",
-    category: "shirt",
+    category: "tops",
   },
   {
     id: 2105,
@@ -129,7 +129,7 @@ const womenProductInfo = [
     price: "99.95",
     liked: false,
     group: "women",
-    category: "shirt",
+    category: "tops",
   },
   {
     id: 2106,
@@ -138,7 +138,7 @@ const womenProductInfo = [
     price: "99.95",
     liked: false,
     group: "women",
-    category: "shirt",
+    category: "tops",
   },
   {
     id: 2107,
@@ -147,7 +147,7 @@ const womenProductInfo = [
     price: "99.95",
     liked: false,
     group: "women",
-    category: "shirt",
+    category: "tops",
   },
   {
     id: 2108,
@@ -156,19 +156,18 @@ const womenProductInfo = [
     price: "99.95",
     liked: false,
     group: "women",
-    category: "shirt",
+    category: "tops",
   },
 ];
 const kidsProductsInfo = [
   {
-    id: 3100,
+    id: 3101,
     image: "product-images/kidslongsleeve.png",
     name: "Ribbon Cotton Jersey Cropped Top",
     price: "39.95",
     liked: false,
     group: "kids",
-    category: "shirt",
-    category: "shirt",
+    category: "tops",
   },
   {
     id: 3102,
@@ -177,7 +176,7 @@ const kidsProductsInfo = [
     price: "39.95",
     liked: false,
     group: "kids",
-    category: "shirt",
+    category: "tops",
   },
   {
     id: 3103,
@@ -186,7 +185,7 @@ const kidsProductsInfo = [
     price: "39.95",
     liked: false,
     group: "kids",
-    category: "shirt",
+    category: "tops",
   },
   {
     id: 3104,
@@ -195,7 +194,7 @@ const kidsProductsInfo = [
     price: "39.95",
     liked: false,
     group: "kids",
-    category: "shirt",
+    category: "tops",
   },
   {
     id: 3105,
@@ -204,7 +203,7 @@ const kidsProductsInfo = [
     price: "39.95",
     liked: false,
     group: "kids",
-    category: "shirt",
+    category: "tops",
   },
   {
     id: 3106,
@@ -213,7 +212,7 @@ const kidsProductsInfo = [
     price: "39.95",
     liked: false,
     group: "kids",
-    category: "shirt",
+    category: "tops",
   },
   {
     id: 3107,
@@ -222,7 +221,7 @@ const kidsProductsInfo = [
     price: "39.95",
     liked: false,
     group: "kids",
-    category: "shirt",
+    category: "tops",
   },
   {
     id: 3108,
@@ -231,7 +230,7 @@ const kidsProductsInfo = [
     price: "39.95",
     liked: false,
     group: "kids",
-    category: "shirt",
+    category: "tops",
   },
 ];
 

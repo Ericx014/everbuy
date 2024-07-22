@@ -2,6 +2,7 @@ import {useState, useContext} from "react";
 import {ProdContext} from "../App";
 import {FaRegHeart, FaHeart} from "react-icons/fa";
 import SimilarProducts from "./MoreProducts";
+import QuantityInput from "./QuantityInput";
 
 const Product = () => {
   const {
@@ -50,38 +51,6 @@ const Product = () => {
     }
   };
 
-  const handleIncrement = () => {
-    if (quantity < 50) {
-      setQuantity(quantity + 1);
-    }
-  };
-
-  const handleDecrement = () => {
-    if (quantity > 0) {
-      setQuantity(quantity - 1);
-    }
-  };
-
-  const quantityInput = (
-    <div className="flex flex-row justify-center bg-white w-fit items-center text-center">
-      <button
-        className="border-[#e3e3e3] border w-8 h-8 flex items-center justify-center rounded-l-md"
-        onClick={handleDecrement}
-      >
-        -
-      </button>
-      <span className="border-[#e3e3e3] border w-12 h-8 flex items-center justify-center">
-        {quantity}
-      </span>
-      <button
-        className="border-[#e3e3e3] border w-8 h-8 flex items-center justify-center rounded-r-md"
-        onClick={handleIncrement}
-      >
-        +
-      </button>
-    </div>
-  );
-
   const likeButton = (
     <button className="items-center" onClick={() => handleLike(activeProd)}>
       {activeProd.liked ? <FaHeart /> : <FaRegHeart />}
@@ -98,7 +67,6 @@ const Product = () => {
 				const itemToCart = {...activeProd, quantity: quantity};
 				const newCartProds = [...cartProd, itemToCart];
 				setCartProd(newCartProds);
-				setQuantity(0);
 				console.log("New cart prods", newCartProds);				
 
 			} else {
@@ -114,6 +82,7 @@ const Product = () => {
 				setCartProd(newCartProds);
 			}
     }
+		setQuantity(0);
   };
 
   return (
@@ -136,7 +105,7 @@ const Product = () => {
                   RM{activeProd.price}
                 </p>
                 {likeButton}
-                {quantityInput}
+                <QuantityInput quantity={quantity} setQuantity={setQuantity}/>
               </div>
               <div className="flex flew-row items-center gap-4">
                 <button
