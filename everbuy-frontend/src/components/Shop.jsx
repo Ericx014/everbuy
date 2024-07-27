@@ -3,6 +3,8 @@ import {ProdContext} from "../App";
 import ShopNav from "./ShopNav";
 import Catalogue from "./Catalogue";
 import ProductsList from "./ProductsList";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const Shop = () => {
   const groups = ["men", "women", "kids"];
@@ -26,6 +28,7 @@ const Shop = () => {
 
   return (
     <section>
+      <Navbar />
       <ShopNav
         groups={groups}
         activeGrp={activeGrp}
@@ -37,6 +40,7 @@ const Shop = () => {
         kidsProds={kidsProducts}
         activeGrp={activeGrp}
       />
+      <Footer />
     </section>
   );
 };

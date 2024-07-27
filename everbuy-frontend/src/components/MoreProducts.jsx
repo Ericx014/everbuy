@@ -4,11 +4,10 @@ import {ProdContext} from "../App";
 
 const SimilarProducts = ({group, category}) => {
   const {allProd, activeProd, setActiveProd} = useContext(ProdContext);
-
-	//Try to only add 4 products
+2
   const similarProd = allProd.filter(
     (prod) => group === prod.group && category === prod.category && prod.id !== activeProd.id
-  ).slice(0, 6);;
+  ).slice(0, 4);;
 
   const handleSelect = (product) => {
     setActiveProd(product);
@@ -17,11 +16,11 @@ const SimilarProducts = ({group, category}) => {
   };
 
   const prodToDisplay = (
-    <div className="w-fit flex flex-row flex-wrap gap-7 justify-center px-[20rem]">
+    <div className="w-fit flex flex-row flex-wrap gap-7 justify-center px-[10rem]">
       {similarProd.map((product, index) => (
         <Link to="/product" key={index} onClick={() => handleSelect(product)}>
           <div className="text-center lg:w-[265px] lg:h-[400px] mb-10">
-            <div className="bg-[#F4F4F4] lg:mb-4 transition-all hover:shadow-[0_0px_40px_2px_rgba(0,0,0,0.2)]">
+            <div className="bg-[#F4F4F4] lg:mb-4 transition-all hover:shadow-[0_0px_10px_2px_rgba(0,0,0,0.15)]">
               <img
                 className="lg:w-[265px] lg:h-[360px]"
                 src={product.image}

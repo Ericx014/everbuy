@@ -1,6 +1,8 @@
 import {useContext} from "react";
 import {ProdContext} from "../App";
 import Heading from "./Heading";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const Cart = () => {
   const {cartProd, setCartProd} = useContext(ProdContext);
@@ -41,7 +43,7 @@ const Cart = () => {
   const tableRightPadding = "";
 
   const cartProdToDisplay = (
-    <table className="w-[85%] h-fit mt-[3rem] bg-[#f6f6f6] rounded-lg shadow-[0_0px_5px_2px_rgba(0,0,0,0.15)]">
+    <table className="w-[85%] h-fit mt-[2rem] bg-[#f6f6f6] rounded-lg shadow-[0_0px_5px_2px_rgba(0,0,0,0.12)]">
       <thead>
         <tr>
           <th className={`text-left pl-12 py-3`}>
@@ -104,16 +106,20 @@ const Cart = () => {
   );
 
   return (
-    <section className="min-h-screen mb-10">
-      <Heading text="Shopping Cart" />
-      <div className="flex flex-row justify-center">
-        {cartProd.length > 0 ? (
-          <>{cartProdToDisplay}</>
-        ) : (
-          <p>No items in cart yet!</p>
-        )}
-      </div>
-    </section>
+    <>
+      <Navbar />
+      <section className="min-h-screen mb-10">
+        <Heading text="Shopping Cart" />
+        <div className="flex flex-row justify-center">
+          {cartProd.length > 0 ? (
+            <>{cartProdToDisplay}</>
+          ) : (
+            <p>No items in cart yet!</p>
+          )}
+        </div>
+      </section>
+      <Footer />
+    </>
   );
 };
 

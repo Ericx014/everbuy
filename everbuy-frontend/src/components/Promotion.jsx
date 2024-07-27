@@ -37,7 +37,7 @@ const Promotion = () => {
           <p className="font-semibold mb-5">RM{product.price}</p>
           <div className="flex flex-row justify-center gap-[2rem]">
             <button className="underline font-semibold">Buy now</button>
-            <button className="bg-white border-black border-[2px] rounded-md py-2 px-3 capitalize">
+            <button className="bg-white border-black border-[2px] rounded-md py-2 px-3 capitalize hover:bg-black hover:text-white hover:scale-110 transition-all">
               view similar
             </button>
           </div>

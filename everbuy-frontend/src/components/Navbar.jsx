@@ -7,7 +7,7 @@ const Navbar = () => {
 	}
 
   return (
-    <nav className="static top-0 display flex w-full h-[8vh] items-center shadow-md border-b-2">
+    <nav className="static top-0 display flex w-full h-[8vh] items-center shadow-md border-b-2 snap-y snap-start">
       <button>
         <img
           src="icons/hamburger-icon.png"
@@ -25,9 +25,9 @@ const Navbar = () => {
               Shop
             </Link>
             {/* <Link className="lg:text-[1.2rem]">Explore</Link> */}
-            <Link to="/giftcards" className="lg:text-[1.2rem] font-semibold">
+            {/* <Link to="/giftcards" className="lg:text-[1.2rem] font-semibold">
               Gift Cards
-            </Link>
+            </Link> */}
           </div>
         </div>
         <div className="flex gap-4 items-center">

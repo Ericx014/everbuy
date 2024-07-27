@@ -41,14 +41,14 @@ const ProductsList = ({productInfo}) => {
 
 
   return (
-    <section className="min-h-[100vh] flex flex-wrap justify-center gap-5 md:px-[3rem] lg:px-[5rem] pb-6 mt-[3rem]">
+    <section className="min-h-[100vh] flex flex-wrap justify-center gap-5 md:px-[3rem] lg:px-[5rem] pb-10 mt-[3rem]">
       {productInfo.map((product, index) => (
         <div
           key={index}
           className="text-center lg:w-[265px] lg:h-[400px] mb-10 flex flex-col gap-0"
         >
           <Link to="/product" onClick={() => handleSelect(product)}>
-            <div className="bg-[#F4F4F4] lg:mb-4 rounded-lg transition-all hover:shadow-[0_0px_10px_2px_rgba(0,0,0,0.15)]">
+            <div className="bg-[#f4f4f4] lg:mb-4 rounded-lg transition-all hover:shadow-[0_0px_10px_2px_rgba(0,0,0,0.15)]">
               <img
                 className="lg:w-[265px] lg:h-[360px]"
                 src={product.image}

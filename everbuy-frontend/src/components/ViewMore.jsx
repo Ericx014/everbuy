@@ -1,6 +1,6 @@
 const ViewMore = () => {
   return (
-    <section className="snap-center flex justify-center bg-[#F6F6F6] pb-[2.5rem]">
+    <section className="snap-center flex justify-center bg-[#F6F6F6] pb-[5rem]">
       <div className="relative flex justify-center items-center w-[90vw] md:w-[720px] lg:min-w-[920px] lg:w-[81vw]">
         <img
           src="promotion-images/bg-img.png"

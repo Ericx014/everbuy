@@ -1,9 +1,6 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Home from "./components/pages/Home";
+import Home from "./components/Home";
 import Shop from "./components/Shop";
-import Giftcards from "./components/Giftcards";
 import Product from "./components/Product";
 import Liked from "./components/Liked";
 import Cart from "./components/Cart";
@@ -59,30 +56,48 @@ const menProductInfo = [
   },
   {
     id: 1106,
-    image: "product-images/loosefitprinted1.png",
-    name: "Loose Fit Printed T-Shirt",
-    price: "59.90",
+    image: "product-images/menshoes1.png",
+    name: "Naike Air Max 1 Essential",
+    price: "299.90",
     liked: false,
     group: "men",
-    category: "tops",
+    category: "shoes",
   },
   {
     id: 1107,
-    image: "product-images/loosefitprinted1.png",
-    name: "Loose Fit Printed T-Shirt",
-    price: "59.90",
+    image: "product-images/menshoes1.png",
+    name: "Naike Air Max 1 Essential",
+    price: "299.90",
     liked: false,
     group: "men",
-    category: "tops",
+    category: "shoes",
   },
   {
     id: 1108,
-    image: "product-images/loosefitprinted1.png",
-    name: "Loose Fit Printed T-Shirt",
-    price: "59.90",
+    image: "product-images/menshoes1.png",
+    name: "Naike Air Max 1 Essential",
+    price: "299.90",
     liked: false,
     group: "men",
-    category: "tops",
+    category: "shoes",
+  },
+  {
+    id: 1109,
+    image: "product-images/menshoes1.png",
+    name: "Naike Air Max 1 Essential",
+    price: "299.90",
+    liked: false,
+    group: "men",
+    category: "shoes",
+  },
+  {
+    id: 1110,
+    image: "product-images/menshoes1.png",
+    name: "Naike Air Max 1 Essential",
+    price: "299.90",
+    liked: false,
+    group: "men",
+    category: "shoes",
   },
 ];
 const womenProductInfo = [
@@ -294,16 +309,13 @@ const App = () => {
         }}
       >
         <BrowserRouter>
-          <Navbar />
           <Routes>
             <Route index element={<Home />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/product" element={<Product />} />
             <Route path="/liked" element={<Liked />} />
-            <Route path="/giftcards" element={<Giftcards />} />
-						<Route path="/cart" element={<Cart />} />
+            <Route path="/cart" element={<Cart />} />
           </Routes>
-          <Footer />
         </BrowserRouter>
       </ProdContext.Provider>
     </>
