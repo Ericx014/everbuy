@@ -1,10 +1,11 @@
+import {useEffect, createContext, useState} from "react";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Home from "./components/Home";
 import Shop from "./components/Shop";
 import Product from "./components/Product";
 import Liked from "./components/Liked";
 import Cart from "./components/Cart";
-import {useEffect, createContext, useState} from "react";
+import Results from "./components/Results";
 
 export const ProdContext = createContext();
 
@@ -267,6 +268,17 @@ const App = () => {
     ...kidsProductsInfo,
   ]);
 
+  const groups = ["men", "women", "kids"];
+  const [activeGrp, setActiveGrp] = useState(groups[0]);
+
+  const storedSearchedProds =
+    JSON.parse(localStorage.getItem("searchProducts")) || [];
+  const [searchedProds, setSearchedProds] = useState(storedSearchedProds);
+
+	const storedSearchInput =
+    JSON.parse(localStorage.getItem("searchInput")) || "";
+	const [searchInput, setSearchInput] = useState(storedSearchInput);
+
   useEffect(() => {
     const updatedAllProd = allProd.map((prod) => {
       for (let i = 0; i < likedProd.length; i++) {
@@ -291,6 +303,10 @@ const App = () => {
     localStorage.setItem("cartProducts", JSON.stringify(cartProd));
   }, [cartProd]);
 
+  useEffect(() => {
+    localStorage.setItem("searchProducts", JSON.stringify(searchedProds));
+  }, [searchedProds]);
+
   return (
     <>
       <ProdContext.Provider
@@ -306,6 +322,13 @@ const App = () => {
           setCartProd,
           allProd,
           setAllProd,
+          groups,
+          activeGrp,
+          setActiveGrp,
+          searchedProds,
+          setSearchedProds,
+					searchInput,
+					setSearchInput
         }}
       >
         <BrowserRouter>
@@ -315,6 +338,7 @@ const App = () => {
             <Route path="/product" element={<Product />} />
             <Route path="/liked" element={<Liked />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/results" element={<Results />} />
           </Routes>
         </BrowserRouter>
       </ProdContext.Provider>

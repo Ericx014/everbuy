@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 const ViewMore = () => {
   return (
-    <section className="snap-center flex justify-center bg-[#F6F6F6] pb-[5rem]">
+    <section className="snap-center flex justify-center bg-[#F6F6F6] pb-[3rem]">
       <div className="relative flex justify-center items-center w-[90vw] md:w-[720px] lg:min-w-[920px] lg:w-[81vw]">
         <img
           src="promotion-images/bg-img.png"
@@ -12,9 +14,11 @@ const ViewMore = () => {
             Didn't see anything you like?
           </h3>
           <div className="flex flex-row justify-center">
-            <button className="bg-white px-4 py-2 md:px-5 md:py-3 lg:px-6 lg:py-4 rounded-md lg:rounded-lg font-semibold tracking-tight hover:scale-110 transition-all">
-              More products
-            </button>
+            <Link to="/shop">
+							<button className="bg-white px-5 py-3 md:px-5 md:py-3 lg:px-6 lg:py-4 rounded-md lg:rounded-lg font-semibold tracking-tight hover:scale-110 transition-all">
+								More products
+							</button>
+						</Link>
           </div>
         </div>
       </div>

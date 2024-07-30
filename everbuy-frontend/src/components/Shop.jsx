@@ -1,15 +1,14 @@
-import {useContext, useState} from "react";
+import {useContext} from "react";
 import {ProdContext} from "../App";
 import ShopNav from "./ShopNav";
 import Catalogue from "./Catalogue";
 import ProductsList from "./ProductsList";
+import Filter from "./Filter";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 const Shop = () => {
-  const groups = ["men", "women", "kids"];
-  const [activeGrp, setActiveGrp] = useState(groups[0]);
-  const {allProd} = useContext(ProdContext);
+  const {allProd, groups, activeGrp, setActiveGrp} = useContext(ProdContext);
   const handleClick = (index) => setActiveGrp(groups[index]);
 
   const menProds = allProd.filter((product) => product.group === "men");
@@ -34,6 +33,7 @@ const Shop = () => {
         activeGrp={activeGrp}
         handleClick={handleClick}
       />
+			<Filter />
       <Catalogue
         menProds={menProducts}
         womenProds={womenProducts}

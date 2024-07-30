@@ -41,7 +41,7 @@ const ProductsList = ({productInfo}) => {
 
 
   return (
-    <section className="min-h-[100vh] flex flex-wrap justify-center gap-5 md:px-[3rem] lg:px-[5rem] pb-10 mt-[3rem]">
+    <section className="min-h-[100vh] flex flex-wrap justify-center gap-5 md:px-[3rem] lg:px-[5rem] pb-10 mt-[2rem]">
       {productInfo.map((product, index) => (
         <div
           key={index}

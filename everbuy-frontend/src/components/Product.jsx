@@ -3,6 +3,8 @@ import {ProdContext} from "../App";
 import {FaRegHeart, FaHeart} from "react-icons/fa";
 import SimilarProducts from "./MoreProducts";
 import QuantityInput from "./QuantityInput";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const Product = () => {
   const {
@@ -62,71 +64,79 @@ const Product = () => {
     if (quantity === 0) {
       console.log(quantityError);
     } else {
-			const cartProdFound = cartProd.find((prod) => prod.id === activeProd.id);
-			if (!cartProdFound){
-				const itemToCart = {...activeProd, quantity: quantity};
-				const newCartProds = [...cartProd, itemToCart];
-				setCartProd(newCartProds);
-				console.log("New cart prods", newCartProds);				
-
-			} else {
-				console.log("Cart item found", cartProdFound);
-				const newQuantity = cartProdFound.quantity + quantity;
-				const newExistingCartProd = {...cartProdFound, quantity: newQuantity};
-				const newCartProds = cartProd.map((prod) => {
-					if (prod.id === cartProdFound.id){
-						return newExistingCartProd
-					}
-					return prod;
-				})
-				setCartProd(newCartProds);
-			}
+      const cartProdFound = cartProd.find((prod) => prod.id === activeProd.id);
+      if (!cartProdFound) {
+        const itemToCart = {...activeProd, quantity: quantity};
+        const newCartProds = [...cartProd, itemToCart];
+        setCartProd(newCartProds);
+        console.log("New cart prods", newCartProds);
+      } else {
+        console.log("Cart item found", cartProdFound);
+        const newQuantity = cartProdFound.quantity + quantity;
+        const newExistingCartProd = {...cartProdFound, quantity: newQuantity};
+        const newCartProds = cartProd.map((prod) => {
+          if (prod.id === cartProdFound.id) {
+            return newExistingCartProd;
+          }
+          return prod;
+        });
+        setCartProd(newCartProds);
+      }
     }
-		setQuantity(0);
+    setQuantity(0);
   };
 
   return (
-    <section className="h-full">
-      {activeProd && (
-        <>
-          <div className="bg-[#F6F6F6] flex flex-row justify-center gap-[4rem] h-fit py-2">
-            <div className="flex flex-col justify-center">
-              <img
-                className="h-[30rem] object-cover"
-                src={activeProd.image}
-                alt="image"
-              />
-            </div>
-            <div className="flex flex-col py-24 justify-center w-[40%]">
-              <p className="font-bold text-[1.5rem] pb-2">{activeProd.name}</p>
-              <p className="pb-9">{lorem50}</p>
-              <div className="flex flex-row items-center gap-3 pb-4">
-                <p className="text-[1.2rem] font-semibold pr-16">
-                  RM{activeProd.price}
+    <>
+      <Navbar />
+      <section className="h-full">
+        {activeProd && (
+          <>
+            <div className="bg-[#F6F6F6] flex flex-row  flex-wrap justify-center gap-[1rem] lg:gap-[4rem] h-fit pt-[2rem] pb-[3rem]">
+              <div className="flex flex-col justify-center">
+                <img
+                  className="h-[20rem] lg:h-[30rem] object-cover"
+                  src={activeProd.image}
+                  alt="image"
+                />
+              </div>
+              <div className="flex flex-col lg:py-24 justify-center w-[80%] lg:w-[40%]">
+                <p className="font-bold text-[1.5rem] pb-2">
+                  {activeProd.name}
                 </p>
-                {likeButton}
-                <QuantityInput quantity={quantity} setQuantity={setQuantity}/>
-              </div>
-              <div className="flex flew-row items-center gap-4">
-                <button
-                  onClick={() => handleCartButton()}
-                  className="bg-[#F4E4C3] py-3 w-36 rounded-md transition-all hover:bg-[#8b6823] hover:text-white"
-                >
-                  Add to cart
-                </button>
-                <button className="bg-[#F4E4C3] py-3 w-36 rounded-md transition-all hover:bg-[#8b6823] hover:text-white">
-                  Buy now
-                </button>
+                <p className="pb-9 text-justify">{lorem50}</p>
+                <div className="flex flex-row items-center gap-3 pb-4">
+                  <p className="text-[1.2rem] font-semibold pr-16">
+                    RM{activeProd.price}
+                  </p>
+                  {likeButton}
+                  <QuantityInput
+                    quantity={quantity}
+                    setQuantity={setQuantity}
+                  />
+                </div>
+                <div className="flex flew-row items-center gap-4">
+                  <button
+                    onClick={() => handleCartButton()}
+                    className="bg-[#F4E4C3] py-3 w-36 rounded-md transition-all hover:bg-[#8b6823] hover:text-white"
+                  >
+                    Add to cart
+                  </button>
+                  <button className="bg-[#F4E4C3] py-3 w-36 rounded-md transition-all hover:bg-[#8b6823] hover:text-white">
+                    Buy now
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-          <SimilarProducts
-            group={activeProd.group}
-            category={activeProd.category}
-          />
-        </>
-      )}
-    </section>
+            <SimilarProducts
+              group={activeProd.group}
+              category={activeProd.category}
+            />
+          </>
+        )}
+      </section>
+      <Footer />
+    </>
   );
 };
 export default Product;

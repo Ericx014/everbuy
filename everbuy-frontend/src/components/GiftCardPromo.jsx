@@ -18,7 +18,7 @@ const GiftCardPromo = () => {
           </div>
         </div>
         <div className="flex flex-col justify-center lg:w-[20rem]">
-          <img src="giftcard.png" alt="giftcard" className="object-contain" />
+          <img src="giftcard.png" alt="giftcard" className="hidden md:block object-contain" />
         </div>
       </div>
     </section>
